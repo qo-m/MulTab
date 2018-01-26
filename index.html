@@ -1,1 +1,148 @@
-<h1>QQ</h1>
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+
+<head>
+    <title>MulTab</title>
+
+    <script type="text/javascript" src=ButtonComponent.js></script>
+    <script type="text/javascript" src=InputComponent.js></script>
+    <script type="text/javascript" src=MulTab.js></script>
+
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./MulTab.css" />
+</head>
+
+<body onload="Setup()">
+    <h1 id="TitleHdr"></h1>
+    <div class="btn-lg">
+        <form class="form-inline">
+            <div class="form-group">
+                <label for="attemptsInp" id="attemptsLbl">
+                    <span class="glyphicon glyphicon-list btn-lg" aria-hidden="true"></span>
+                </label>
+                <input type="text" class="form-control" id="attemptsInp">
+            </div>
+            <div class="form-group">
+                <label for="delayInp" id="delayLbl"></label>
+                <input type="text" class="form-control" id="delayInp">
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-primary" onclick="Start();" id="StartBtn">
+                    <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+                    <span id="StartBtnLbl"></span>
+                </button>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-default" onclick="Stop();" id="StopBtn">
+                    <span class="glyphicon glyphicon-stop" aria-hidden="true"></span>
+                    <span id="StopBtnLbl"></span>
+                </button>
+            </div>
+            <!--
+                glyphicon glyphicon-play
+                 id="StopBtnLbl"
+            <button type="button" class="btn btn-default btn-lg">
+                <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Star
+            </button>
+            -->
+        </form>
+    </div>
+    <div class="btn-lg">
+        <form class="form-inline">
+            <div class="form-group">
+                <input type="text" class="form-control" id="mul1Inp">
+            </div>
+            <div class="form-group">
+                <label for="mul2Lbl">
+                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                </label>
+                <input type="text" class="form-control" id="mul2Inp">
+            </div>
+            <div class="form-group">
+                <label for="prodLbl">
+                    <span class="glyphicon glyphicon-pause gly-rotate-270" aria-hidden="true"></span>
+                </label>
+                <input type="text" class="form-control" id="prodInp" onkeydown="if (event.keyCode == 13) Check()">
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-default" onclick="Check();" id="CheckBtn">
+                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                    <span id="CheckBtnLbl"></span>
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="btn-lg">
+        <div class="form-inline">
+            <div class="form-group">
+                <label for="correctInp" id="correctLbl"></label>
+                <input type="text" class="form-control" id="correctInp">
+            </div>
+            <div class="form-group">
+                <label for="wrongInp" id="wrongLbl"></label>
+                <input type="text" class="form-control" id="wrongInp">
+            </div>
+            <div class="form-group">
+                <label for="timeoutInp" id="timeoutLbl"></label>
+                <input type="text" class="form-control" id="timeoutInp">
+            </div>
+            <div class="form-group">
+                <label for="totalInp" id="totalLbl"></label>
+                <input type="text" class="form-control" id="totalInp">
+            </div>
+        </div>
+    </div>
+    <div>
+        <p class="bg-primary">
+            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        </p>
+        <p class="bg-success">
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </p>
+        <p class="bg-info">
+            <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+        </p>
+        <p class="bg-warning">
+            <span class="glyphicon glyphicon-check" aria-hidden="true"></span>
+        </p>
+        <p class="bg-danger">
+            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        </p>
+
+        <p class="bg-primary">
+            <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+        </p>
+        <p class="bg-success">
+            <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+        </p>
+        <p class="bg-info">
+            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+        </p>
+        <p class="bg-warning">
+            <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+        </p>
+        <p class="bg-danger">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+        </p>
+
+        <p class="bg-primary">
+                <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+            </p>
+            <p class="bg-success">
+                <span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>
+            </p>
+            <p class="bg-info">
+                <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>
+            </p>
+            <p class="bg-warning">
+                <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+            </p>
+            <p class="bg-danger">
+                <span class="glyphicon glyphicon-minus-sign" aria-hidden="true"></span>
+            </p>
+        </div>
+</body>
+</div>
+
+</html>
